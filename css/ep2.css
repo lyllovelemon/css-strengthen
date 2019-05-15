@@ -1,0 +1,10 @@
+.test{
+    width: 200px;
+    height: 100px;
+    background: #dddddd;
+    resize: both;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
