@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片modal框</title>
+    <link rel="stylesheet" href="css/ep3.css">
+</head>
+<body>
+ <img class="img" id="myImg" src="images/lights.jpg" alt="Northern Lights, Norway">
+ <div class="modal" id="myModal">
+     <span class="close">x</span>
+     <img class="modal-img" id="img1" alt="">
+     <div id="caption"></div>
+ </div>
+</body>
+<script>
+    let model=document.getElementById('myModal');
+    let img=document.getElementById('myImg');
+    let imgSrc=document.getElementById('img1');
+    let caption=document.getElementById('caption');
+    img.onclick=function () {
+        model.style.display='block';
+        imgSrc.src=this.src;
+        imgSrc.alt=this.alt;
+        caption.innerHTML=this.alt;
+	}
+	let close=document.getElementsByClassName('close')[0];
+    close.onclick=function () {
+        model.style.display='none';
+	}
+</script>
+</html>
