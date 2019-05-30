@@ -15,3 +15,4 @@
 + [心跳](http://htmlpreview.github.io/?https://github.com/lyllovelemon/css-strengthen/blob/master/src/ep4.html)
 + [行星轨迹动画](https://lyllovelemon.github.io/css-strengthen/src/ep5.html)
 + [原生js方法实现运动的小球](http://htmlpreview.github.io/?https://github.com/lyllovelemon/css-strengthen/blob/master/src/ep6.html)
++ [css实现气球泡泡对话框](https://lyllovelemon.github.io/css-strengthen/src/bubble.html)
