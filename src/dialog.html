@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css实现泡泡对话框</title>
+</head>
+<style>
+    .dialog{
+        background: lightcoral;
+        color: #ffffff;
+        font-size: 14px;
+        width: 500px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin:100px 0 50px 0 ;
+        border-radius: 10px;
+        margin-left: 100px;
+    }
+    .top{
+        font-size: 60px;
+        width: 100px;
+        height: 100px;
+        left: 32px;
+        top: 59px;
+        position:absolute;
+        color: lightcoral;
+    }
+    .dialog2{
+        width: 500px;
+        height: 100px;
+        background: orange;
+        color: #ffffff;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 10px;
+        margin-left: 100px;
+    }
+    .dialog2 span{
+        width: 0;
+        height: 0;
+        font-size: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+    .test{
+        border-width: 10px 20px;
+        border-style:dashed solid solid dashed;
+        border-color:transparent #ffffff #ffffff transparent;
+        top: 60px;
+        left: -40px;
+    }
+    .bot{
+        border-width:20px;
+        border-style:solid;
+        border-color:#ffffff orange orange #ffffff;
+        left:-40px;
+        top:40px;
+    }
+</style>
+<body>
+<!--1. 菱形法实现泡泡对话框-->
+<div class="dialog">
+    <span class="top">◆</span>
+    分析结果：已选择 8个条件，覆盖目标人数为 546546人
+</div>
+
+<!--2. 边框法实现泡泡对话框-->
+<div class="dialog2">
+    <span class="test"></span>
+    <span class="bot"></span>
+    国产大豆今年种植面积增加1000万亩，2020年将达1.4亿亩
+
+</div>
+</body>
+</html>
