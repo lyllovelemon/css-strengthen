@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>离屏渲染</title>
+</head>
+<style>
+    html,body{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(to right,#654ea3,#eaafc8);
+        /*cursor: none;*/
+    }
+</style>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    let ctx=document.getElementById("canvas")
+    let content=ctx.getContext("2d")
+    let WIDTH=document.body.clientWidth
+    let HEIGHT=document.body.clientHeight
+    ctx.width=WIDTH
+    ctx.height=HEIGHT
+    const round=[]
+    let useCache=true
+
+    const initRoundPopulation=100
+
+    function init(){
+        for(let i=0;i<initRoundPopulation;i++){
+            round[i]=new Round_item(i,Math.random()*WIDTH,Math.random()*HEIGHT)
+            round[i].draw()
+        }
+        animate()
+    }
+    function Round_item(index,x,y) {
+        this.index=index
+        this.x=x
+        this.y=y
+        this.useCache = useCache
+
+        this.cacheCanvas = document.createElement("canvas")
+        this.cacheCtx = this.cacheCanvas.getContext("2d")
+
+        this.r = Math.random() * 2 + 1
+
+        this.cacheCanvas.width = 6 * this.r
+        this.cacheCanvas.height = 6 * this.r
+
+        let alpha = (Math.floor(Math.random() * 10) + 1) / 10 / 2
+        this.color = "rgba(255,255,255," + alpha + ")"
+
+        if(this.useCache){
+            this.cache();
+        }
+
+    }
+    Round_item.prototype.draw=function () {
+        if(!useCache){
+            content.beginPath()
+            content.fillStyle=this.color
+            content.shadowBlur=this.r*2
+            content.arc(this.x,this.y,this.r,0,2*Math.PI,false)
+            content.fill()
+            content.closePath()
+        }
+        else {
+            content.drawImage(this.cacheCanvas,this.x-this.r,this.y-this.r)
+        }
+
+    }
+    Round_item.prototype.move=function () {
+        this.y-=0.15
+        if(this.y<=-10){
+            this.y=HEIGHT+10
+        }
+        this.draw()
+    }
+    function animate(){
+        content.clearRect(0,0,WIDTH,HEIGHT)//清除屏幕效果
+        for(let i in round){
+            round[i].move()
+        }
+        requestAnimationFrame(animate)
+    }
+    Round_item.prototype.cache=function(){
+
+        this.cacheCtx.save()
+        this.cacheCtx.fillStyle=this.color
+        this.cacheCtx.shadowColor='#fff'
+        this.cacheCtx.shadowBlur=this.r*2
+        this.cacheCtx.beginPath()
+        this.cacheCtx.arc(this.r*3,this.r*3,this.r,0,2*Math.PI)
+        this.cacheCtx.closePath()
+        this.cacheCtx.fill()
+        this.cacheCtx.restore()
+    }
+    init()
+
+
+
+</script>
+</body>
+</html>

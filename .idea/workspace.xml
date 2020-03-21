@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="078c4eb7-7ef8-4d3d-81dd-57e1dfe7ff9c" name="Default Changelist" comment="feat:add css quiz 1">
-      <change afterPath="$PROJECT_DIR$/src/canvas/bubble.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/canvas/mouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/canvas/offline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -92,6 +92,7 @@
       <workItem from="1561206817407" duration="1466000" />
       <workItem from="1561340988588" duration="25000" />
       <workItem from="1584767671778" duration="259000" />
+      <workItem from="1584775674284" duration="2190000" />
     </task>
     <task id="LOCAL-00001" summary="feat:add README">
       <created>1557891854143</created>
@@ -181,7 +182,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
