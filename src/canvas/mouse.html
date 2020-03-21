@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #canvas{
+            background: #000000;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    let canvas=document.getElementById("canvas")
+    let context=canvas.getContext("2d")
+    let WIDTH= canvas.width=document.documentElement.clientWidth
+    let HEIGHT=canvas.height=document.documentElement.clientHeight
+    let params={
+        num:100,
+        color:false,//颜色 false-随机渐变色
+        r:0.9,//圆每次增加的半径
+        o:0.09,//判断圆消失的条件，数值越大消失的越快
+        a:1
+    },color,color2,round_arr=[]//存放圆的数组
+
+    window.onmousemove=function (e) {
+        let mouseX=e.clientX,mouseY=e.clientY
+        round_arr.push({
+            mouseX:mouseX,
+            mouseY:mouseY,
+            r:params.r,
+            o:1
+        })
+    }
+    if(params.color){
+        color2=params.color
+    }
+    else {
+        color=Math.random()*360
+
+    }
+    console.log('params',params.color,color)
+    function animate() {
+        if(!params.color){
+            color+=.1
+            color2='hsl('+color+',100%,80%)'
+        }
+        context.clearRect(0,0,WIDTH,HEIGHT)
+        for(let i=0;i<round_arr.length;i++){
+            context.fillStyle=color2
+            context.beginPath()
+            context.arc(round_arr[i].mouseX,round_arr[i].mouseY,round_arr[i].r,0,Math.PI*2)
+            context.closePath()
+            context.fill()
+            round_arr[i].r+=params.r
+            round_arr[i].o-=params.o
+
+            if(round_arr[i].o<=0){
+                round_arr.splice(i,1)
+                i--
+            }
+        }
+        window.requestAnimationFrame(animate)
+    }
+
+    animate()
+
+</script>
+</body>
+</html>

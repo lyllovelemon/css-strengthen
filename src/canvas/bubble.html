@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(to right,#654ea3,#eaafc8);
+            /*cursor: none;*/
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    let canvas=document.getElementById("canvas")
+    let context=canvas.getContext("2d")
+    let WIDTH=document.body.clientWidth
+    let HEIGHT=document.body.clientHeight
+    canvas.width=WIDTH
+    canvas.height=HEIGHT
+
+    const initRoundPopulation=100
+    const round=[]
+    function init(){
+        for(let i=0;i<initRoundPopulation;i++){
+            round[i]=new Round_item(i,Math.random()*WIDTH,Math.random()*HEIGHT)
+            round[i].draw()
+        }
+        animate()
+        console.log(round)
+    }
+    function Round_item(index,x,y) {
+        this.index=bubble
+        this.x=x
+        this.y=y
+        this.r=Math.random()*20+1
+        let alpha=(Math.floor(Math.random()*10)+1)/10/2
+        this.color="rgba(255,255,255,"+alpha+")"
+
+    }
+    Round_item.prototype.draw=function () {
+        context.beginPath()
+        context.fillStyle=this.color
+        context.shadowBlur=this.r*2
+        context.arc(this.x,this.y,this.r,0,2*Math.PI,false)
+        context.fill()
+        context.closePath()
+    }
+    Round_item.prototype.move=function () {
+            this.y-=0.15
+            if(this.y<=-10){
+                this.y=HEIGHT+10
+            }
+            this.draw()
+    }
+    function animate(){
+        context.clearRect(0,0,WIDTH,HEIGHT)//清除屏幕效果
+        for(let i in round){
+            round[i].move()
+        }
+        requestAnimationFrame(animate)
+    }
+    window.onload=function(){
+        init()
+    }
+
+
+</script>
+</body>
+</html>
