@@ -20,6 +20,7 @@
 ## canvas实现
 + [气泡悬浮效果](https://lyllovelemon.github.io/css-strengthen/src/canvas/bubble.html)
 + [鼠标互动效果](https://lyllovelemon.github.io/css-strengthen/src/canvas/mouse.html)
++ [时钟效果](https://lyllovelemon.github.io/css-strengthen/src/canvas/ep1.html)
 + [离屏渲染](https://lyllovelemon.github.io/css-strengthen/src/canvas/offline.html)
 
 ## css如何工作-解析和绘制css的关键路径

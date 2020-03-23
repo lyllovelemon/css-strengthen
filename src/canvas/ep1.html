@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        background: #dddddd;
+    }
+    #canvas{
+        margin: 10px;
+        padding: 10px;
+        background: #ffffff;
+        border: thin inset #aaaaaa;
+    }
+</style>
+<body>
+<canvas id="canvas" width="600" height="300">你的浏览器不支持canvas</canvas>
+<script>
+    let canvas=document.getElementById('canvas'),
+        ctx=canvas.getContext("2d"),font_height=15,margin=35,HAND_TRUNCATION=canvas.width/25,
+        HOUR_HAND_TRUNCATION=canvas.width/10,numeral_spacing=20,radius=100,
+        hand_radius=radius+numeral_spacing
+    function drawCircle(){
+        ctx.beginPath()
+        ctx.arc(canvas.width/2,canvas.height/2,radius,0,Math.PI*2,false)
+        ctx.stroke()
+    }
+    function drawNumerals(){
+        let numerals=[1,2,3,4,5,6,7,8,9,10,11,12],angle=0,numeralWidth=0
+        numerals.forEach((numeral)=>{
+            angle=Math.PI/6*(numeral-3)
+            numeralWidth=ctx.measureText(numeral.toString()).width//检查字体宽度
+            ctx.fillText(numeral.toString(),canvas.width/2+Math.cos(angle)*(hand_radius)-numeralWidth/2,canvas.height/2+Math.sin(angle)*(hand_radius)+
+            font_height/3)
+        })
+
+    }
+    function drawCenter(){
+        ctx.beginPath()
+        ctx.arc(canvas.width/2,canvas.height/2,5,0,Math.PI*2,false)
+        ctx.fill()
+    }
+    function drawHand(loc,isHour){
+        let angle=(Math.PI*2)*(loc/60)-Math.PI/2,
+            handleRadius=isHour?radius-hand_radius-HOUR_HAND_TRUNCATION:radius-HOUR_HAND_TRUNCATION
+        ctx.moveTo(canvas.width/2,canvas.height/2)
+        ctx.lineTo(canvas.width/2+Math.cos(angle)*handleRadius,canvas.height/2+Math.sin(angle)*handleRadius)
+        ctx.stroke()
+    }
+    function drawHands() {
+        let date=new Date(),hour=date.getHours()
+        hour=hour>12?hour-12:hour
+        drawHand(hour*5+(date.getMinutes()/60)*5,true,.5)
+        drawHand(date.getMinutes(),false,.5)
+        drawHand(date.getSeconds(),false,.2)
+    }
+    function drawClock(){
+        ctx.clearRect(0,0,canvas.width,canvas.height)
+        drawCircle()
+        drawCenter()
+        drawHands()
+        drawNumerals()
+    }
+    ctx.font=font_height+'px Arial'
+    loop=setInterval(drawClock,1000)
+    // ctx.font='36px Arial'
+    // ctx.fillStyle='cornflowerblue'
+    // ctx.strokeStyle='blue'
+    // ctx.fillText('Hello Canvas',canvas.width/2-150,canvas.height/2-+15)
+    // ctx.strokeText('Hello Canvas',canvas.width/2-150,canvas.height/2-+15)
+</script>
+</body>
+</html>
