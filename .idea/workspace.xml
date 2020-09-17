@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="078c4eb7-7ef8-4d3d-81dd-57e1dfe7ff9c" name="Default Changelist" comment="feat:add css quiz 1">
-      <change afterPath="$PROJECT_DIR$/src/canvas/ep1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/effects/hoverEffects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/effects/stackMotionHoverEffects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/effects/textAnimation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/anime.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/demoad.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/canvas/bubble.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/canvas/bubble.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +60,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -46,6 +68,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptLanguageLevel" value="JSX" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:/Program Files/nodejs/node.exe" />
@@ -89,6 +112,7 @@
       <workItem from="1584767671778" duration="259000" />
       <workItem from="1584775674284" duration="2190000" />
       <workItem from="1584955856406" duration="4191000" />
+      <workItem from="1600343066859" duration="3389000" />
     </task>
     <task id="LOCAL-00001" summary="feat:add README">
       <created>1557891854143</created>
@@ -171,20 +195,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
