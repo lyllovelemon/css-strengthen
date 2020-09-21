@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #222222;
+        background-image: linear-gradient(335deg,black 23px,transparent 23px),linear-gradient(155deg,black 23px,transparent 23px),
+    linear-gradient(335deg,black 23px,transparent 23px),linear-gradient(155deg,black 23px,transparent 23px);
+        background-size: 58px 58px;
+        background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    }
+    .main{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    .txt{
+        font-size: 48px;
+        animation: shine 2s forwards,flicker 3s infinite;
+        text-shadow: 0 0 0.6rem #ffe6ff;
+        color: #ffe6ff;
+    }
+    .all{
+        animation: shine 2s forwards,flicker 10s 1s infinite;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .blick{
+        animation: blick 2s infinite ease;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .mid{
+        animation: shine 2s forwards,blick 3s 2s infinite;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+    @keyframes flicker {
+        0%,
+        22%,
+        36%,
+        75% {
+            color: #ffe6ff;
+            text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+        }
+        28%,
+        33% {
+            color: #ff65bd;
+            text-shadow: none;
+        }
+        82%,
+        97% {
+            color: #ff2483;
+            text-shadow: none;
+        }
+    }
+    @keyframes shine {
+        0%{
+            color: #6b1839;
+            text-shadow: none;
+        }
+        100%{
+            color: #ffe6ff;
+            text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+        }
+    }
+    @keyframes blick {
+        0%,70%{
+            opacity: 0.4;
+        }
+        50%,90%{
+            opacity: 0.8;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+</style>
+<body>
+<div class="main">
+    <span class="txt">
+         <span class="all">全栈</span>
+        <span class="blick">修仙</span>
+        <span class="mid">之</span>
+        路
+    </span>
+
+</div>
+</body>
+</html>

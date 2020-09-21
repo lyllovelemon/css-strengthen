@@ -17,6 +17,7 @@
 + [原生js方法实现运动的小球](https://lyllovelemon.github.io/css-strengthen/src/ep6.html)
 + [css实现气球泡泡对话框](https://lyllovelemon.github.io/css-strengthen/src/bubble.html)
 + [纯css实现泡泡对话框2(提高性能)](https://lyllovelemon.github.io/css-strengthen/src/dialog.html)
++ [文字霓虹灯效果](https://lyllovelemon.github.io/css-strengthen/src/effects/textAnimation2.html)
 ## canvas实现
 + [气泡悬浮效果](https://lyllovelemon.github.io/css-strengthen/src/canvas/bubble.html)
 + [鼠标互动效果](https://lyllovelemon.github.io/css-strengthen/src/canvas/mouse.html)

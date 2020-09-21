@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078c4eb7-7ef8-4d3d-81dd-57e1dfe7ff9c" name="Default Changelist" comment="feat:add css quiz 1">
-      <change afterPath="$PROJECT_DIR$/src/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/effects/hoverEffects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/effects/stackMotionHoverEffects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/effects/textAnimation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/anime.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/demoad.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/effects/textAnimation2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +106,9 @@
       <workItem from="1584775674284" duration="2190000" />
       <workItem from="1584955856406" duration="4191000" />
       <workItem from="1600343066859" duration="3389000" />
+      <workItem from="1600393516604" duration="1919000" />
+      <workItem from="1600651351893" duration="68000" />
+      <workItem from="1600676523142" duration="1815000" />
     </task>
     <task id="LOCAL-00001" summary="feat:add README">
       <created>1557891854143</created>
@@ -222,6 +218,12 @@
     <MESSAGE value="feat:add animate demo" />
     <MESSAGE value="feat:add css quiz 1" />
     <option name="LAST_COMMIT_MESSAGE" value="feat:add css quiz 1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="785" y="262" key="FileChooserDialogImpl" timestamp="1600651418389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="785" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600651418389" />
   </component>
   <component name="masterDetails">
     <states>
